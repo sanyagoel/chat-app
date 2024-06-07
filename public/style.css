@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #C3B1E1 ;
+}
+
+.title{
+    margin: 20px 0;
+}
+
+.main{
+    border: 8px solid rgb(158, 109, 174);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.name{
+    display: flex;
+    font-size: 32px;
+    font-weight: 700;
+    padding: 8px 16px;
+    background-color: #ebb6fa;
+}
+
+.name > span {
+    color: #8f419d;
+}
+
+.name-input {
+    font-size : 24px;
+    font-weight : 700;
+    color: #741ca0;
+    border: none;
+    flex-grow: 1;
+    border-radius: 18px;
+    margin: 0px 13px;
+    outline: none;
+    background-color: #ebb6fa ;
+
+}
+
+.message-container {
+    display : flex;
+    flex-direction: column;
+    background-color: #ba7af1;
+    height: 550px;
+    width: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.message-left , .message-right {
+    list-style: none;
+    padding: 8px 12px;
+    margin: 12px;
+    max-width : 250px;
+    font-size: 16px;
+    word-wrap: break-word;
+}
+
+.message-left{
+  border-radius: 20px 20px 20px 0px; 
+  background-color: #bd9af4; 
+  align-self: flex-start;
+  box-shadow: -2px 2px 4px #906bcb
+
+}
+
+.message-right{
+    border-radius: 20px 20px 0px 20px; 
+    background-color: #4b2e7b; 
+    align-self: flex-end;
+    box-shadow: 2px 2px 4px #906bcb;
+   color:  white
+  }
+
+.message-left >p >span , .message-right >p >span{
+   display: block; 
+   font-style: italic;
+   font-size: 12px;
+   margin-top: 5px;
+}
+
+
+.feedback{
+    font-style: italic;
+    font-size: 14px;
+    padding: 10px 16px 16px 16px;
+    text-align: center;
+
+}
+
+.message-form{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.message-input{
+    flex-grow: 1;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding : 0 12px;
+    background-color: #ebb6fa;
+}
+
+.send-button{
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    cursor: pointer;
+
+}
+
+.v-divider{
+    height: 50px;
+    width: 3px;
+    background-color: #4b2e7b;
+}
+
+.clients-total{
+    padding: 20px 20px 20px 20px;
+
+}
+
+.welcome-msg{
+        font-style: italic;
+        font-size: 14px;
+        padding: 10px 16px 16px 16px;
+        text-align: center;
+    
+}

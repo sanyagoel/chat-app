@@ -15,7 +15,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(135deg, #f78fb3, #9d7cbf, #5a77a8);
+    background: linear-gradient(135deg, #d4418e, #0652c5, #032757);
     color: #fff;
     text-align: center;
 }
@@ -32,43 +32,41 @@ body {
     border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
+    width: 90%;
+    max-width: 600px;
 }
 
-.username-box h2 {
-    margin-bottom: 20px;
+.name {
+    display: flex;
+    align-items: center;
     font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.username-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    border: 2px solid #fff;
-    outline: none;
-    font-size: 1rem;
+    font-weight: 700;
+    padding: 8px 16px;
     background-color: rgba(255, 255, 255, 0.2);
-    color: #fff;
-}
-
-.username-input::placeholder {
-    color: #ddd;
-}
-
-.join-button {
-    padding: 10px 20px;
     border-radius: 10px;
-    border: none;
-    background-color: #4b2e7b;
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
 }
 
-.join-button:hover {
-    background-color: #6a47a3;
+.name > span {
+    color: #ffffff;
+}
+
+.name-input {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    border: none;
+    flex-grow: 1;
+    border-radius: 10px;
+    margin-left: 10px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    color: #fff;
+}
+
+.name-input::placeholder {
+    color: #ddd;
 }
 
 .message-container {
@@ -77,12 +75,13 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 20px;
-    width: 500px;
+    height: 300px;
     max-height: 550px;
     overflow-y: auto;
-    margin-top: 20px;
+    margin-bottom: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
+    list-style: none;
 }
 
 .message-left, .message-right {
@@ -90,14 +89,14 @@ body {
     padding: 10px 15px;
     margin: 10px 0;
     border-radius: 20px;
-    max-width: 250px;
+    max-width: 80%;
     word-wrap: break-word;
     font-size: 1rem;
-    box-shadow: 0 4px 8px rgba(194, 24, 180, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .message-left {
-    background-color: #f146e0;
+    background-color: #fa3eea;
     align-self: flex-start;
 }
 
@@ -123,7 +122,7 @@ body {
 .message-form {
     display: flex;
     justify-content: space-between;
-    width: 500px;
+    width: 100%;
     margin-top: 20px;
 }
 
@@ -138,19 +137,26 @@ body {
     color: #fff;
 }
 
+.message-input::placeholder {
+    color: #ddd;
+}
+
 .send-button {
     padding: 10px 20px;
     border-radius: 10px;
     border: none;
-    background-color: #4b2e7b;
+    background-color: #0432c6;
     color: #fff;
     font-size: 1rem;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     transition: background-color 0.3s ease;
 }
 
 .send-button:hover {
-    background-color: #6a47a3;
+    background-color: #0820b9;
 }
 
 .v-divider {

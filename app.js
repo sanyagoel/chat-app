@@ -16,10 +16,14 @@ app.use("/", homeRouter);
 const server = app.listen(3000, () => {
   console.log("using port 3000");
 });
+const clients = new Set();
 
 const io = require("socket.io")(server);
 
 io.on("connection", (socket) => {
+  clients.add(socket.id);
+  io.emit("clients-total",clients.size);
+
   socket.on("join", (data) => {
     io.emit("welcome", { username: data.username });
     console.log(data.username, "joined the chat");
@@ -32,5 +36,9 @@ io.on("connection", (socket) => {
 
   socket.on("feedback", (data) => {
     socket.broadcast.emit("feedback-server", data);
+  });
+  socket.on("disconnect",()=>{
+    clients.delete(socket.id);
+    io.emit("clients-total",clients.size);
   });
 });
